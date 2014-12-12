@@ -1,0 +1,41 @@
+<div class="sidebar">
+  <ul class="list-unstyled">
+    <li><strong>Seneste</strong></li>
+    {% for post in site.posts limit: 5 %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <ul class="list-unstyled">
+    <li><strong>Populære</strong></li>
+    {% for popular in site.data.popular %}
+      {% for post in site.posts %}
+        {% if post.url == popular.url %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+
+
+  <ul class="list-unstyled">
+    <li><a href="http://twitter.com/mektball"><i class="fa fa-twitter"></i>Twitter</a></li>
+    <li><a href="https://www.facebook.com/roachhd"><i class="fa fa-facebook"></i>Facebook</a></li>
+    <li><a href="http://www.pinterest.com/mektball/"><i class="fa fa-pinterest"></i>Pinterest</a></li>
+    <li><a href="http://github.com/roachhd"><i class="fa fa-github"></i>GitHub</a></li>
+    <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS Feed</a></li>
+    <li><a href="http://instagram.com/RoachHD"><i class="fa fa-instagram"></i>Instagram</a></li>
+    <li><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i>Google+</a></li>
+    <li><a href="http://www.flickr.com/photos/roachhd/"><i class="fa fa-flickr"></i>flickr</a></li>
+    <li><a href="/om-nom/blog"><i class="fa fa-heart"></i>Bloglovin'</a></li>
+  </ul>
+  <ul class="list-unstyled">
+    <li><a href="http://katieball.me/">
+          <img src="/images/katieball.png" alt="Katie at Roach Haus">
+       </a>
+    </li>
+    <li><a href="http://katieball.me/">
+          <img src="/images/katieball.png" alt="Katie at Roachhd">
+        </a>
+    </li>
+  </ul>
+</div>
