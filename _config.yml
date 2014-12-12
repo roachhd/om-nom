@@ -1,0 +1,18 @@
+permalink: /:year/:month/:title/
+name: Om Nom
+markdown: redcarpet
+highlighter: true
+exclude: [tools, README.md, vendor]
+timezone: Europe/Copenhagen
+
+
+# Custom
+author:
+  name: Katie Ball
+  email: hello@roachhd.com
+
+
+url: http://roachhd.github.io/om-nom
+feed: http://roachhd.github.io/om-nom/atom.xml
+disqus: 
+description: A mad food blog
