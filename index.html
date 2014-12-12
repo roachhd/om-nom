@@ -1,0 +1,19 @@
+---
+layout: default
+title: Om Nom
+ tags:
+- blog
+- food
+- jekyll
+- nom
+---
+<div id="home">
+  {% for post in site.categories.blog %}
+  <a href="{{ post.url }}" title="{{ post.title }}">
+    <img src="{{ post.image }}" alt="{{ post.title }}"/>
+  </a>
+  {% endfor %}
+</div>
+<script>
+$("#home").justifiedGallery({'rowHeight':320});
+</script>
