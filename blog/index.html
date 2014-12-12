@@ -1,0 +1,13 @@
+---
+layout: sidebar
+title: Om Nom
+description: A blog about food.
+tags:
+- blog
+- jekyll
+- food
+- nom
+---
+{% for post in site.categories.blogpost %}
+{% include post-preview.html %}
+{% endfor %}
